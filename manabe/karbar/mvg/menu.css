@@ -1,0 +1,164 @@
+.menu {
+  direction: rtl;
+  font-family: 'WYekan';
+  background-color: #79a7d6;
+}
+.menu nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2em;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+}
+.menu nav .menu_item {
+  height: 3em;
+  line-height: 3em;
+}
+.menu nav .menu_item .i {
+  background: #1f4164;
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  line-height: inherit;
+  width: 3em;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+}
+.menu nav a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  height: 100%;
+  background: #336ca6;
+  color: #fff;
+  z-index: 2;
+}
+.menu nav a span {
+  display: block;
+  margin-right: 3.6em;
+  width: auto;
+  -webkit-transition: margin-right 0.5s ease;
+          transition: margin-right 0.5s ease;
+}
+.menu nav a::before {
+  content: "";
+  background: #1f4164;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: -100%;
+  -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+}
+.menu nav a:hover::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+}
+.menu nav a:hover .i {
+  font-size: 1.25em;
+  width: 3.6em;
+  -webkit-transition: all 0.35s;
+          transition: all 0.35s;
+}
+.menu nav a:hover span {
+  margin-right: 4.8em;
+}
+.menu nav div {
+  border-bottom: 0.15em solid rgba(210,226,241,0.4);
+}
+.menu nav div:last-child {
+  border-bottom: none;
+}
+#btnFix {
+  position: fixed;
+}
+.dokmen {
+  border: solid rgba(36,76,116,0.5) 1rem;
+  background: rgba(51,108,166,0.6);
+  color: #fff;
+  border-radius: 3rem;
+  padding: 0;
+  margin: 0;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.2rem;
+  outline: none;
+  top: 2rem;
+  right: 2rem;
+  z-index: 400;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.dokmen:hover {
+  width: 5.5rem;
+  background: #336ca6;
+}
+.dokmen:hover .rel .t-menu {
+  opacity: 1;
+  z-index: 550;
+}
+.dokmen:hover .rel .icm {
+  font-size: 2rem;
+  top: -2rem;
+}
+.dokmen:hover .rel .icl {
+  font-size: 2.4rem;
+  right: 2.5rem;
+  top: -2.4rem;
+}
+.dokmen .rel {
+  position: relative;
+}
+.dokmen .rel .t-menu {
+  position: absolute;
+  right: 1.1rem;
+  top: -1.8rem;
+  font-size: 1.6rem;
+  opacity: 0;
+  z-index: 500;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.dokmen .rel .icm {
+  position: absolute;
+  right: -0.8rem;
+  top: -1.7rem;
+  z-index: 699;
+  color: #fff;
+  font-size: 1.8rem;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.dokmen .rel .icl {
+  position: absolute;
+  right: 0.4rem;
+  top: -1.7rem;
+  z-index: 699;
+  color: #fff;
+  font-size: 1.8rem;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}

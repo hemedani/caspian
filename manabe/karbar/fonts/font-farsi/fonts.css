@@ -1,0 +1,147 @@
+	@font-face {
+	    font-family: 'WBardia';
+	    src: url('BardiyaWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+	@font-face {
+	    font-family: 'WIranian';
+	    src: url('IranianSerifWeb.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}	
+	
+
+
+	@font-face {
+	    font-family: 'WMitra';
+	    src: url('MitraWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
+	@font-face {
+	    font-family: 'WMitra';
+	    src: url('MitraWeb-Regular1.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+}
+	
+	@font-face {
+	    font-family: 'WMitra';
+	    src: url('MitraWeb-Bold.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+	
+	@font-face {
+	    font-family: 'WRoya';
+	    src: url('RoyaWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	
+	}
+
+	@font-face {
+	    font-family: 'WRoya';
+	    src: url('RoyaWeb-Bold.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	
+	}
+	
+	@font-face {
+	    font-family: 'WTabassom';
+	    src: url('WebTabassom.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	
+	@font-face {
+	    font-family: 'WTitr';
+	    src: url('TitrWeb.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+	
+	@font-face {
+	    font-family: 'WTitrTGE';
+	    src: url('TitrTGE-Web.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+	
+	
+	@font-face {
+	    font-family: 'WYekan';
+	    src:  url('YekanWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	@font-face {
+	    font-family: 'WYekan';
+	    src:  url('YekanWeb-Bold.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+		
+	@font-face {
+	    font-family: 'WTraffic';
+	    src: url('TrafficWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	
+	@font-face {
+	    font-family: 'WNasim';
+	    src: url('NasimWeb.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+	
+	@font-face {
+	    font-family: 'WKoodak';
+	    src: url('KoodakWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+     	
+	}
+	
+	@font-face {
+	    font-family: 'WJoude';
+	    src: url('JoudeWeb.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+
+	@font-face {
+	    font-family: 'WNazanin';
+	    src: url('NazaninWeb-Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'WNazanin';
+	    src: url('NazaninWeb-Bold.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}	
+	
+	
+	@font-face {
+	    font-family: 'WAmer';
+	    src: url('AmerWeb-Regular.woff') format('woff');
+	    font-weight: bold;
+	    font-style: normal;
+	}		

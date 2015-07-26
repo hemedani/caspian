@@ -1,0 +1,57 @@
+snap-content {
+  background-color: #fff;
+  outline-style: solid;
+  outline-width: 0.2rem;
+  outline-color: rgba(98,152,207,0.6);
+  box-shadow: 0 0 3rem #142b42;
+  font-family: 'WYekan';
+}
+snap-content div.wrap {
+  min-height: 45rem;
+}
+.direction {
+  direction: rtl;
+  position: relative;
+}
+aside {
+  text-align: center;
+}
+aside nav {
+  margin-bottom: 1rem;
+}
+aside nav a {
+  display: block;
+  background: #ff5959;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #ff0d0d;
+}
+img {
+  max-width: 100%;
+}
+.post {
+  border: 1px solid #b3b3b3;
+  padding: 1rem;
+  margin: 1rem;
+}
+.logo > img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: block;
+}
+.pi-row {
+  direction: rtl;
+}
+.pi-row .pi-col-sm {
+  float: right;
+}
+.pi-row .pi-col-sm .pi-list-with-icons {
+  list-style: none;
+}
+.pi-row .pi-col-sm .pi-bullet-icon {
+  font-size: 3rem;
+  padding-left: 0.5rem;
+  color: #336ca6;
+}

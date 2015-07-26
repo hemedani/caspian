@@ -1,0 +1,125 @@
+@require 'moteghayer'
+.menu
+  direction rtl
+  font-family 'WYekan'
+  background-color lighten(rang, 40%)
+  nav
+    display flex
+    flex-direction column
+    justify-content center
+    font-size 1.2em
+    width 100%
+    position absolute
+    z-index: 99
+    transition all 0.35s
+    .menu_item
+      height 3em
+      line-height 3em
+      .i
+        background darken(rang, 40%)
+        display block
+        position absolute
+        right 0
+        height 100%
+        line-height inherit
+        width 3em
+        text-align center
+        transition all 0.35s
+    a
+      text-decoration none
+      position relative
+      display block
+      height 100%
+      background rang
+      color white
+      z-index: 2
+      span
+        display block
+        margin-right 3.6em
+        width auto
+        transition margin-right 0.5s ease
+    a::before
+      content: ""
+      background darken(rang, 40%)
+      position absolute
+      z-index -1
+      top 0
+      bottom 0
+      left 100%
+      right -100%
+      transition all 0.35s
+    a:hover::before
+      left 0
+      right 0
+      top 0
+      bottom 0
+      transition all 0.35s
+    a:hover
+      .i
+        font-size 1.25em
+        width 3.6em
+        transition all 0.35s
+      span
+        margin-right 4.8em
+    div
+      border-bottom 0.15em solid lighten(rangRGB(0.4), 80%)
+      &:last-child
+        border-bottom none
+#btnFix
+  position fixed
+.dokmen
+  border solid darken(rangRGB(0.5), 30%) 1rem
+  background rangRGB(0.6)
+  color white
+  border-radius 3rem
+  padding 0
+  margin 0
+  height 3rem
+  width 3rem
+  font-size 1.2rem
+  outline none
+  top 2rem
+  right 2rem
+  z-index 400
+  transition all 0.3s
+  &:hover
+    width 5.5rem
+    background rangRGB(1)
+    .rel
+      .t-menu
+        opacity 1
+        z-index 550
+      .icm
+        font-size 2rem
+        top -2rem
+      .icl
+        font-size 2.4rem
+        right 2.5rem
+        top -2.4rem
+  .rel
+    position relative
+    .t-menu
+      position absolute
+      right 1.1rem
+      top -1.8rem
+      font-size 1.6rem
+      opacity 0
+      z-index 500
+      color white
+      transition all 0.3s
+    .icm
+      position absolute
+      right -0.8rem
+      top -1.7rem
+      z-index 699
+      color white
+      font-size 1.8rem
+      transition all 0.3s
+    .icl
+      position absolute
+      right 0.4rem
+      top -1.7rem
+      z-index 699
+      color white
+      font-size 1.8rem
+      transition all 0.3s

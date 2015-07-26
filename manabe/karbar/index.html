@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="naft">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
+	<!-- endbower -->
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="mvg/index.css">
+	<!-- endinject -->
+
+</head>
+
+<body>
+
+	<div ng-controller="MainCtrl">
+
+		<div snap-drawer="right" class="menu">
+			<p>من سمت راست هستم</p>
+
+			<nav>
+
+				<div class="menu_item">
+					<a ui-sref="khane">
+						<i class="i icon-home"></i>
+						<span>خانه</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="akhbar">
+						<i class="i icon-newspaper"></i>
+						<span>اخبار</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="maghale">
+						<i class="i icon-pencil"></i>
+						<span>مقالات</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="rahbord">
+						<i class="i icon-eye"></i>
+						<span>راهبردها</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="zamine">
+						<i class="i icon-droplet"></i>
+						<span>زمینه کاری</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="darbare">
+						<i class="i icon-info"></i>
+						<span>درباره ما</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="ertebat">
+						<i class="i icon-phone"></i>
+						<span>ارتباط با ما</span>
+					</a>
+				</div>
+
+				<div class="menu_item">
+					<a ui-sref="iconha">
+						<i class="i icon-home"></i>
+						<span>آیکون ها</span>
+					</a>
+				</div>
+
+			</nav>
+
+		</div>
+
+
+		<snap-content id="amir">
+			<div class="direction">
+				<button class="dokmen" id="btnFix" snap-toggle="right">
+					<div class="rel"><i class="icon-menu icm"></i>
+						<span class="t-menu">منو</span><i class="icon-left-open icl"></i></div>
+				</button>
+
+				<div ui-view class="wrap" autoscroll="true"></div>
+
+				<div class="pasafe">
+					<h1>پاصفحه</h1>
+				</div>
+			</div>
+			</snap-static>
+
+
+	</div>
+	<!-- Payan NG CONTROLLER -->
+
+
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/snapjs/snap.js"></script>
+	<script src="bower_components/angular-snap/angular-snap.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- endbower -->
+
+	<!-- inject:js -->
+	<script src="barname/app.js"></script>
+	<script src="barname/baghiye.js"></script>
+	<script src="barname/akhbar/akhbar.js"></script>
+	<script src="barname/darbare/darbare.js"></script>
+	<script src="barname/ertebat/ertebat.js"></script>
+	<script src="barname/iconha/icon.js"></script>
+	<script src="barname/khane/khane.js"></script>
+	<script src="barname/maghale/maghale.js"></script>
+	<script src="barname/rahbord/rahbord.js"></script>
+	<script src="barname/zamine/zamine.js"></script>
+	<!-- endinject -->
+</body>
+
+</html>
