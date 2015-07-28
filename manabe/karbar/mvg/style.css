@@ -11,7 +11,10 @@ snap-content div.wrap {
 }
 .direction {
   direction: rtl;
-  position: relative;
+  position: static;
+}
+.wrap {
+  padding-top: 9rem;
 }
 aside {
   text-align: center;

@@ -91,23 +91,18 @@
 .menu nav div:last-child {
   border-bottom: none;
 }
-#btnFix {
-  position: fixed;
-}
 .dokmen {
   border: solid rgba(36,76,116,0.5) 1rem;
   background: rgba(51,108,166,0.6);
   color: #fff;
   border-radius: 3rem;
+  float: right;
   padding: 0;
-  margin: 0;
+  margin: 0.4rem 2rem 0 0;
   height: 3rem;
   width: 3rem;
   font-size: 1.2rem;
   outline: none;
-  top: 2rem;
-  right: 2rem;
-  z-index: 400;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
@@ -121,12 +116,12 @@
 }
 .dokmen:hover .rel .icm {
   font-size: 2rem;
-  top: -2rem;
+  top: -1.1rem;
 }
 .dokmen:hover .rel .icl {
   font-size: 2.4rem;
   right: 2.5rem;
-  top: -2.4rem;
+  top: -1.2rem;
 }
 .dokmen .rel {
   position: relative;
@@ -134,7 +129,7 @@
 .dokmen .rel .t-menu {
   position: absolute;
   right: 1.1rem;
-  top: -1.8rem;
+  top: -1.4rem;
   font-size: 1.6rem;
   opacity: 0;
   z-index: 500;
@@ -145,7 +140,7 @@
 .dokmen .rel .icm {
   position: absolute;
   right: -0.8rem;
-  top: -1.7rem;
+  top: -1.1rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;
@@ -155,7 +150,7 @@
 .dokmen .rel .icl {
   position: absolute;
   right: 0.4rem;
-  top: -1.7rem;
+  top: -1.1rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;

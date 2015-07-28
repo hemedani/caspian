@@ -1018,7 +1018,7 @@ snap-content div.wrap {
 }
 .direction {
   direction: rtl;
-  position: relative;
+  position: static;
 }
 .wrap {
   *zoom: 1;
@@ -1038,6 +1038,9 @@ snap-content div.wrap {
 }
 .wrap:after {
   clear: both;
+}
+.wrap {
+  padding-top: 9rem;
 }
 aside {
   display: block;
@@ -1342,23 +1345,18 @@ img {
 .menu nav div:last-child {
   border-bottom: none;
 }
-#btnFix {
-  position: fixed;
-}
 .dokmen {
   border: solid rgba(36,76,116,0.5) 1rem;
   background: rgba(51,108,166,0.6);
   color: #fff;
   border-radius: 3rem;
+  float: right;
   padding: 0;
-  margin: 0;
+  margin: 0.4rem 2rem 0 0;
   height: 3rem;
   width: 3rem;
   font-size: 1.2rem;
   outline: none;
-  top: 2rem;
-  right: 2rem;
-  z-index: 400;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
@@ -1372,12 +1370,12 @@ img {
 }
 .dokmen:hover .rel .icm {
   font-size: 2rem;
-  top: -2rem;
+  top: -1.1rem;
 }
 .dokmen:hover .rel .icl {
   font-size: 2.4rem;
   right: 2.5rem;
-  top: -2.4rem;
+  top: -1.2rem;
 }
 .dokmen .rel {
   position: relative;
@@ -1385,7 +1383,7 @@ img {
 .dokmen .rel .t-menu {
   position: absolute;
   right: 1.1rem;
-  top: -1.8rem;
+  top: -1.4rem;
   font-size: 1.6rem;
   opacity: 0;
   z-index: 500;
@@ -1396,7 +1394,7 @@ img {
 .dokmen .rel .icm {
   position: absolute;
   right: -0.8rem;
-  top: -1.7rem;
+  top: -1.1rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;
@@ -1406,12 +1404,72 @@ img {
 .dokmen .rel .icl {
   position: absolute;
   right: 0.4rem;
-  top: -1.7rem;
+  top: -1.1rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
+}
+div.sarbarg {
+  position: fixed;
+  width: 100%;
+}
+div.sarbarg .paein {
+  line-height: 2.3rem;
+  font-size: 1rem;
+  height: 5rem;
+  position: relative;
+  padding-top: 1.3rem;
+  background-color: #edf3f9;
+  border-bottom: 0.2rem solid #17314b;
+  color: #fff;
+  text-shadow: 0 1px 15px #000;
+  box-shadow: 0 1px 15px rgba(0,0,0,0.8);
+  color: #fff;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+div.sarbarg .paein .LogoArm {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 80%;
+}
+div.sarbarg .paein .LogoNeveshte {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-left: 1rem;
+  left: 0;
+}
+div.sarbarg .balla {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #17314b;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+div.sticky .balla {
+  display: none;
+}
+div.sticky .paein {
+  z-index: 1500;
+  top: 0;
+  font-size: 1.2rem;
+  height: 4rem;
+  padding-top: 0.2rem;
+  background-color: rgba(0,0,0,0.4);
+}
+div.sticky .paein a {
+  font-size: 3.5rem;
 }
 .pasafe {
   background-color: #193653;

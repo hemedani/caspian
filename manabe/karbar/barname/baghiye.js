@@ -1,12 +1,10 @@
 $('#amir').scroll(function () {
 	var $win = $('#amir');
-	$('#btnFix').css('top', 32 + $win.scrollTop());
+	$('.sarbarg').css('top', $win.scrollTop());
 
-	$('div.scroller').scroll(function () {
-		if ($('div.scroller').scrollTop() > 150) {
-			$('header.sarbarg').addClass('sticky');
-		} else {
-			$('header.sarbarg').removeClass('sticky');
-		}
-	});
+	if ($('#amir').scrollTop() > 200) {
+		$('.sarbarg').addClass('sticky');
+	} else {
+		$('.sarbarg').removeClass('sticky');
+	}
 });

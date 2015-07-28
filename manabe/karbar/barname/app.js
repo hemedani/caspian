@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('naft', ['snap', 'ui.router']);
+	var app = angular.module('naft', ['angular-loading-bar', 'snap', 'ui.router']);
 
 	app.controller('MainCtrl', function (snapRemote) {
 		snapRemote.getSnapper().then(function (snapper) {
@@ -12,10 +12,13 @@
 		});
 	});
 
-	app.config(function ($stateProvider) {
+	app.config(function (cfpLoadingBarProvider, $stateProvider, $urlRouterProvider) {
+
+		$urlRouterProvider.otherwise('/khane');
+		cfpLoadingBarProvider.latencyThreshold = 5;
 
 		$stateProvider.state('khane', {
-				url: '/',
+				url: '/khane',
 				templateUrl: 'barname/khane/khane.html',
 				controller: 'khane as kh'
 			})

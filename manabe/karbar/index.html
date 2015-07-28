@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
+	<link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
 	<!-- endbower -->
 
 	<!-- inject:css -->
@@ -89,10 +90,23 @@
 
 		<snap-content id="amir">
 			<div class="direction">
-				<button class="dokmen" id="btnFix" snap-toggle="right">
-					<div class="rel"><i class="icon-menu icm"></i>
-						<span class="t-menu">منو</span><i class="icon-left-open icl"></i></div>
-				</button>
+				<div id="header" class="sarbarg">
+					<div class="balla">
+
+					</div>
+					<div class="paein">
+						<button class="dokmen" snap-toggle="right">
+							<div class="rel"><i class="icon-menu icm"></i>
+								<span class="t-menu">منو</span><i class="icon-left-open icl"></i></div>
+						</button>
+
+						<img src="tasavir/logo_2.svg" class="LogoArm" alt="LogoArm">
+						<img src="tasavir/logo_1.svg" class="LogoNeveshte" alt="LogoNeveshte">
+					</div>
+				</div>
+
+
+
 
 				<div ui-view class="wrap" autoscroll="true"></div>
 
@@ -115,6 +129,7 @@
 	<script src="bower_components/snapjs/snap.js"></script>
 	<script src="bower_components/angular-snap/angular-snap.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
 	<!-- endbower -->
 
 	<!-- inject:js -->
@@ -123,8 +138,8 @@
 	<script src="barname/akhbar/akhbar.js"></script>
 	<script src="barname/darbare/darbare.js"></script>
 	<script src="barname/ertebat/ertebat.js"></script>
-	<script src="barname/iconha/icon.js"></script>
 	<script src="barname/khane/khane.js"></script>
+	<script src="barname/iconha/icon.js"></script>
 	<script src="barname/maghale/maghale.js"></script>
 	<script src="barname/rahbord/rahbord.js"></script>
 	<script src="barname/zamine/zamine.js"></script>
