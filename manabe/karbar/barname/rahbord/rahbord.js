@@ -1,7 +1,6 @@
 (function () {
 	'use strict';
-	angular.module('naft').controller('rahbord', function ($scope, snapRemote) {
+	angular.module('naft').controller('rahbord', function ($scope) {
 		$scope.name = 'rahbord';
-		snapRemote.close();
 	});
 }());

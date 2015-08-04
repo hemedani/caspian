@@ -1,20 +1,34 @@
 snap-content {
-  background-color: #fff;
+  background-color: #ffefd8;
   outline-style: solid;
   outline-width: 0.2rem;
   outline-color: rgba(98,152,207,0.6);
   box-shadow: 0 0 3rem #142b42;
   font-family: 'WYekan';
+  z-index: 99;
 }
-snap-content div.wrap {
+snap-content div.lafaf {
   min-height: 45rem;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 0;
 }
 .direction {
   direction: rtl;
   position: static;
+  height: 100%;
+  width: 100%;
 }
-.wrap {
-  padding-top: 9rem;
+.lafaf {
+  padding-top: 8rem;
+}
+.mine-lafaf {
+  position: relative;
 }
 aside {
   text-align: center;
@@ -43,18 +57,4 @@ img {
   margin-bottom: 1rem;
   margin-top: 1rem;
   display: block;
-}
-.pi-row {
-  direction: rtl;
-}
-.pi-row .pi-col-sm {
-  float: right;
-}
-.pi-row .pi-col-sm .pi-list-with-icons {
-  list-style: none;
-}
-.pi-row .pi-col-sm .pi-bullet-icon {
-  font-size: 3rem;
-  padding-left: 0.5rem;
-  color: #336ca6;
 }

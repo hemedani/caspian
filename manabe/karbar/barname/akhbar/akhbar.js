@@ -1,7 +1,6 @@
 (function () {
 	'use strict';
-	angular.module('naft').controller('akhbar', function ($scope, snapRemote) {
+	angular.module('naft').controller('akhbar', function ($scope) {
 		$scope.name = 'akhbar';
-		snapRemote.close();
 	});
 }());

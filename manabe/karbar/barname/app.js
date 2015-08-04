@@ -1,21 +1,23 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('naft', ['angular-loading-bar', 'snap', 'ui.router']);
+	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'snap', 'duParallax', 'angular-flexslider']);
 
-	app.controller('MainCtrl', function (snapRemote) {
-		snapRemote.getSnapper().then(function (snapper) {
-			snapper.settings = {
-				element: document.getElementById('amir'),
-				elementMirror: document.getElementById('btnFix')
-			};
+	app.controller('asliCtrl', function ($rootScope, $anchorScroll, snapRemote) {
+		$rootScope.$on('$stateChangeSuccess', function () {
+			$('#AmirSnapper').animate({
+				scrollTop: 0
+			}, 800);
+			snapRemote.close();
 		});
 	});
 
-	app.config(function (cfpLoadingBarProvider, $stateProvider, $urlRouterProvider) {
+	app.config(function ($stateProvider, $urlRouterProvider, snapRemoteProvider) {
 
 		$urlRouterProvider.otherwise('/khane');
-		cfpLoadingBarProvider.latencyThreshold = 5;
+		snapRemoteProvider.globalOptions = {
+			disable: 'left'
+		};
 
 		$stateProvider.state('khane', {
 				url: '/khane',
@@ -55,7 +57,7 @@
 			.state('iconha', {
 				url: '/iconha',
 				templateUrl: 'barname/iconha/icon.html',
-				controller: 'icon as jz'
+				controller: 'icon as ic'
 			});
 	});
 

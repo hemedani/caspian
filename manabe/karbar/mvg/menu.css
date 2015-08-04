@@ -92,23 +92,23 @@
   border-bottom: none;
 }
 .dokmen {
-  border: solid rgba(36,76,116,0.5) 1rem;
-  background: rgba(51,108,166,0.6);
+  border: solid #fff 0.19rem;
+  background-color: rgba(51,108,166,0.7);
+  box-shadow: 0 0 8px #0f2032;
+  text-shadow: 2px 2px 2px #0f2032;
   color: #fff;
-  border-radius: 3rem;
-  float: right;
+  border-radius: 0.6rem;
   padding: 0;
   margin: 0.4rem 2rem 0 0;
   height: 3rem;
   width: 3rem;
   font-size: 1.2rem;
-  outline: none;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
 .dokmen:hover {
   width: 5.5rem;
-  background: #336ca6;
+  background-color: #336ca6;
 }
 .dokmen:hover .rel .t-menu {
   opacity: 1;
@@ -120,7 +120,7 @@
 }
 .dokmen:hover .rel .icl {
   font-size: 2.4rem;
-  right: 2.5rem;
+  right: 3.25rem;
   top: -1.2rem;
 }
 .dokmen .rel {
@@ -128,7 +128,7 @@
 }
 .dokmen .rel .t-menu {
   position: absolute;
-  right: 1.1rem;
+  right: 1.9rem;
   top: -1.4rem;
   font-size: 1.6rem;
   opacity: 0;
@@ -139,8 +139,8 @@
 }
 .dokmen .rel .icm {
   position: absolute;
-  right: -0.8rem;
-  top: -1.1rem;
+  right: 0.1rem;
+  top: -1.05rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;
@@ -149,8 +149,8 @@
 }
 .dokmen .rel .icl {
   position: absolute;
-  right: 0.4rem;
-  top: -1.1rem;
+  right: 1.1rem;
+  top: -1.05rem;
   z-index: 699;
   color: #fff;
   font-size: 1.8rem;

@@ -1,0 +1,9 @@
+.zir-slide {
+  position: relative;
+  background: #dc7757;
+  height: 15rem;
+  margin-top: -6rem;
+  border-bottom: 0.32rem dashed #b64926;
+  border-top: 0.32rem dashed #b64926;
+  display: block;
+}

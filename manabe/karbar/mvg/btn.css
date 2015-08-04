@@ -1,0 +1,23 @@
+.i-btn {
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #509d75;
+  border: none;
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
+.i-alt {
+  background-image: url("../tasavir/DSVG/iconalt.svg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.i-icn {
+  border-radius: 50%;
+}

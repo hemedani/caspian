@@ -1,0 +1,31 @@
+@require 'moteghayer'
+
+ui-view.ng-enter,[ui-view].ng-enter
+  animation fadeInDown 850ms
+
+// ui-view.ng-leave,[ui-view].ng-leave
+//   animation fadeOutLeft 750ms
+
+// ng-include.ng-enter-active,
+// [ng-include].ng-enter-active,
+// ui-view.ng-enter-active,
+// [ui-view].ng-enter-active
+//   opacity 1
+
+// .icone.ng-enter,
+// .icone.ng-leave
+//   transition transform 150ms
+//
+// .icone.ng-enter,
+// .icone.ng-leave-active
+//   transform translate3d(100%, 0, 0)
+//
+// .icone.ng-enter-active
+//   transform translate3d(0, 0, 0)
+.icone.ng-enter
+  animation fadeInDown 850ms
+
+.ng-enter-stagger,
+.ng-leave-stagger
+  animation-delay 50ms
+  animation-duration 0

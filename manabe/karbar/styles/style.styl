@@ -1,24 +1,34 @@
 @require 'moteghayer'
-
 snap-content
-  background-color #fff
-  outline-style solid
-  outline-width 0.2rem
-  outline-color lighten(rangRGB(0.6), 30%)
-  box-shadow 0 0 3rem darken(rang, 60%)
-  font-family 'WYekan'
-  div.wrap
-    min-height 45rem
+	background-color lighten(bezh(1), 80%)
+	outline-style solid
+	outline-width 0.2rem
+	outline-color lighten(rangRGB(0.6), 30%)
+	box-shadow 0 0 3rem darken(rang, 60%)
+	font-family 'WYekan'
+	z-index 99
+	div.lafaf
+		min-height 45rem
+
+h1,h2,h3,h4,p,a
+	margin 0
 
 .direction
-  direction rtl
-  position static
+	direction rtl
+	position static
+	height 100%
+	width 100%
 
-.wrap
-	center(70rem, 1.2rem)
+.lafaf
+	center(100%)
+	padding-top 8rem
 
-.wrap
-  padding-top 9rem
+.mine-lafaf
+	position relative
+
+.mine-lafaf-80
+	center(80%, 2rem)
+
 aside
 	stack()
 	text-align center
@@ -62,14 +72,3 @@ img
 		margin-bottom 1rem
 		margin-top 1rem
 		display block
-
-.pi-row
-  direction rtl
-  .pi-col-sm
-    float right
-    .pi-list-with-icons
-      list-style none
-    .pi-bullet-icon
-      font-size 3rem
-      padding-left 0.5rem
-      color rang

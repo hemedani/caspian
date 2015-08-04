@@ -1,0 +1,16 @@
+ui-view.ng-enter,
+[ui-view].ng-enter {
+  -webkit-animation: fadeInDown 850ms;
+          animation: fadeInDown 850ms;
+}
+.icone.ng-enter {
+  -webkit-animation: fadeInDown 850ms;
+          animation: fadeInDown 850ms;
+}
+.ng-enter-stagger,
+.ng-leave-stagger {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+  -webkit-animation-duration: 0;
+          animation-duration: 0;
+}
