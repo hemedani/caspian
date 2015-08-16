@@ -157,3 +157,32 @@
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
+.btn-menu {
+  position: absolute;
+  bottom: 3rem;
+  right: 2.2rem;
+  z-index: 3;
+  opacity: 0.5;
+  width: 7.6rem;
+  overflow: hidden;
+}
+.btn-menu span {
+  position: absolute;
+  opacity: 0;
+  padding: 0.2rem 0.8rem 0.2rem 0.3rem;
+  right: 2rem;
+  top: 0.5rem;
+  color: #fff;
+  width: 4.45rem;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  background-color: #b64926;
+}
+.btn-menu:hover {
+  opacity: 1;
+}
+.btn-menu:hover span {
+  opacity: 1;
+  -webkit-animation: fadeInRight 800ms;
+          animation: fadeInRight 800ms;
+}

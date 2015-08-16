@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'snap', 'duParallax', 'angular-flexslider']);
+	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'snap', 'duParallax']);
 
 	app.controller('asliCtrl', function ($rootScope, $anchorScroll, snapRemote) {
 		$rootScope.$on('$stateChangeSuccess', function () {

@@ -1,0 +1,13 @@
+<div class="slider">
+  <div class="slide" ng-repeat="image in images" ng-show="image.visible">
+    <img ng-src="tasavir/Pix/Doros/{{image.src}}" />
+    <h1 class="i-alt">{{image.h}}</h1>
+    <p class="i-alt">
+      {{image.p}}
+    </p>
+  </div>
+  <div class="arrows">
+    <button class="icon-right-open-big i-round i-ghahve i-alt" ng-click="next(false)"></button>
+    <span>عکس بعدی</span>
+  </div>
+</div>

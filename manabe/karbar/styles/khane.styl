@@ -1,9 +1,11 @@
 @require 'moteghayer'
+.chap
+	direction ltr
+	position relative
 .zir-slide
 	position relative
 	background lighten(ghahvei(1), 30%)
-	height 15rem
-	margin-top -6rem
+	height 12rem
 	border-bottom 0.32rem dashed ghahvei(1)
 	border-top 0.32rem dashed ghahvei(1)
 	display block
@@ -15,19 +17,92 @@
 	.al-v
 		align(vertical)
 
-.khabarha
-	stack()
-
-.khabar
-	stack()
-	// border 1rem solid darken(white, 30%)
-	@media(min-width: 40rem)
-		col(1/3, cycle: 3)
-	> img
+.grid
+	position relative
+	list-style none
+	text-align center
+	figure
 		stack()
 		@media(min-width: 40rem)
-			col(1/4)
-	> article
-		stack()
-		@media(min-width: 40rem)
-			col(3/4)
+			col(1/3, cycle: 3, gutter: 2)
+		position relative
+		overflow hidden
+		background #3085a3
+		text-align center
+		cursor pointer
+		box-shadow 0px 0px 10px #000
+		img
+			position: relative
+			display: block
+			min-height: 100%
+			max-width: 100%
+			opacity: 0.8
+		h2
+			font-weight: 300
+			margin: 0
+		p
+			margin: 0
+			font-size: 68.5%
+		figcaption
+			padding: 2em
+			color: #fff
+			font-size: 1.25em
+			backface-visibility: hidden
+			position: absolute
+			top: 0
+			right: 0
+			width: 100%
+			height: 100%
+			> a
+				position: absolute
+				top: 0
+				right: 0
+				width: 100%
+				height: 100%
+				z-index: 1000
+				text-indent: 200%
+				white-space: nowrap
+				font-size: 0
+				opacity: 0
+			&::before, &::after
+				pointer-events: none
+	.effect-milo
+		background: #2e5d5a
+		&:hover
+			img
+				opacity: 0.5
+				transform: translate3d(0,0,0) scale(1.5)
+			p
+				opacity: 1
+				transform: translate3d(0,0,0)
+			h2
+				background darken(sabz(1), 40%)
+				right 7rem
+		img
+			max-width none
+			width -webkit-calc(100% + 60px)
+			width calc(100% + 60px)
+			opacity 1
+			transition opacity 0.35s, transform 0.35s
+			transform translate3d(30px,0,0) scale(1.12)
+			backface-visibility hidden
+		h2
+			position absolute
+			font-size 1.5rem
+			margin 0
+			line-height 2rem
+			right 5rem
+			bottom 6rem
+			text-shadow 0 0 3px ghahvei(1), 0 0 5px darken(ghahvei(1), 50%)
+			background darken(sabz(0.7), 40%)
+			border-radius 0.8rem
+			padding 0 0.4rem
+			transition background 0.35s, right 0.35s
+		p
+			padding 0 0.8rem 1rem 0
+			width: 50%
+			border-right: 1px solid #fff
+			text-align: right
+			opacity: 0
+			transition: opacity 0.35s, transform 0.35s
+			transform: translate3d(2rem,0,0)

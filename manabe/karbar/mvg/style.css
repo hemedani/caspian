@@ -25,36 +25,8 @@ a {
   width: 100%;
 }
 .lafaf {
-  padding-top: 8rem;
+  padding-top: 7.4rem;
 }
 .mine-lafaf {
   position: relative;
-}
-aside {
-  text-align: center;
-}
-aside nav {
-  margin-bottom: 1rem;
-}
-aside nav a {
-  display: block;
-  background: #ff5959;
-  color: #fff;
-  text-decoration: none;
-  padding: 1rem;
-  border-bottom: 1px solid #ff0d0d;
-}
-img {
-  max-width: 100%;
-}
-.post {
-  border: 1px solid #b3b3b3;
-  padding: 1rem;
-  margin: 1rem;
-}
-.logo > img {
-  max-width: 100%;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  display: block;
 }

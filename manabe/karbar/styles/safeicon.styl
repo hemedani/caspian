@@ -4,3 +4,22 @@
     stack()
     @media(min-width: 40rem)
       col(1/4, cycle: 4)
+    margin 1rem
+    position relative
+    overflow hidden
+    button
+      font-size 2.3rem
+    &:hover
+      span
+        opacity 1
+        animation fadeInRight 800ms
+    span
+      position absolute
+      opacity 0
+      padding 0.2rem 0.8rem 0.2rem 0.3rem
+      right 5.4rem
+      top 2rem
+      color white
+      border-top-left-radius 0.7rem
+      border-bottom-left-radius 0.7rem
+      background-color sabz(1)
