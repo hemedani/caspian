@@ -37,7 +37,7 @@ gulp.task('tabib', function () {
 gulp.task('style', ['pak-styl'], function () {
 	sabt('tabdil filehaye stylus be css va barresi o ezaf kardan prefixHa');
 	return gulp
-		.src(tanzim.stylus)
+		.src(tanzim.stylIndex)
 		.pipe($.plumber({
 			errorHandler: darKhata
 		}))

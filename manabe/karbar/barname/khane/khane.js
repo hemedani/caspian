@@ -3,14 +3,6 @@
 	angular.module('naft')
 		.controller('khane', function ($scope) {
 			$scope.name = 'khane';
-
-			$scope.slideshow = {};
-			$scope.slideshow.slides = [
-				'tasavir/Pix/Doros/1.jpg',
-				'tasavir/Pix/Doros/2.jpg',
-				'tasavir/Pix/Doros/3.jpg',
-				'tasavir/Pix/Doros/4.jpg'
-			];
 			$scope.akhbar = [{
 				'id': 1,
 				'onvan': 'خبر شماره ۱',
@@ -64,33 +56,6 @@
 				h: 'متن شماره پنج',
 				p: 'متن شماره پنج متن شماره پنج متن شماره پنج متن شماره پنج متن شماره پنج متن شماره پنج'
 			}];
-			// var logId = 0;
-			// $scope.slideshow.log = [];
-			// $scope.slideshow.start = function (slider) {
-			// 	console.log(slider);
-			// 	$scope.slideshow.log.push({
-			// 		id: ++logId,
-			// 		message: 'start'
-			// 	});
-			// };
-			// $scope.slideshow.before = function () {
-			// 	$scope.slideshow.log.push({
-			// 		id: ++logId,
-			// 		message: 'before'
-			// 	});
-			// };
-			// $scope.slideshow.after = function () {
-			// 	$scope.slideshow.log.push({
-			// 		id: ++logId,
-			// 		message: 'after'
-			// 	});
-			// };
-			// $scope.slideshow.end = function () {
-			// 	$scope.slideshow.log.push({
-			// 		id: ++logId,
-			// 		message: 'end'
-			// 	});
-			// };
 
 		}); //END >> controller('khane',
 }());

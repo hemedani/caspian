@@ -28,6 +28,7 @@ module.exports = function() {
 			'!' + barname + 'rs-plugin/**/*.js'
 		],
 		stylus: samteKarbar + 'styles/*.styl',
+		stylIndex: samteKarbar + 'styles/index.styl',
 		server: server,
 		movaghat: mvg,
 		/**
