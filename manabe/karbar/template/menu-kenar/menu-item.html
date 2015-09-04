@@ -1,0 +1,15 @@
+<aside class="menu">
+  <div class="mine-lafaf-80">
+    <a ui-sref="khane" class="LogoArm2">
+      <img src="tasavir/logo_2.svg" alt="LogoArm">
+    </a>
+  </div>
+  <nav>
+    <div class="menu_item" ng-repeat="gozine in gozineha">
+      <a ui-sref="{{gozine.masir}}">
+        <i class="i {{gozine.icon}}"></i>
+        <span>{{gozine.esm}}</span>
+      </a>
+    </div>
+  </nav>
+</aside>

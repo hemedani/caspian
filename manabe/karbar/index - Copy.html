@@ -8,6 +8,7 @@
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
 	<link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
 	<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
 	<!-- endbower -->
@@ -18,49 +19,38 @@
 </head>
 
 <body>
+	<div ng-controller="asliCtrl">
+		<div snap-drawer="right" class="menu">
 
-	<section ng-controller="asliCtrl">
+			<ng-include src="'barname/baghi/menudrawer.html'"></ng-include>
 
-		<div class="overlay" ng-click="baste()"></div>
+		</div>
 
-		<menu-item gozineha="gozineha"></menu-item>
+		<a id="scrollToTop">
+			<div class="rel"><i class="icon-up-open i-balla"></i></div>
+		</a>
 
-		<article class="direction">
-			<a id="scrollToTop">
-				<div class="rel"><i class="icon-up-open i-balla"></i></div>
-			</a>
+		<snap-content id="AmirSnapper">
 
+			<div class="direction">
 
-			<div id="header" class="sarbarg">
-				<div class="balla">
+				<ng-include src="'barname/baghi/sarsafe.html'"></ng-include>
 
-				</div>
-				<div class="paein">
+				<div ui-view class="lafaf" ng-animate-children></div>
 
-					<div class="btn-menu">
-						<button id="canvasmenu" class="icon-menu i-round i-firoz i-alt" ng-click="collapse()"></button>
-						<span>منو</span>
-					</div>
+				<ng-include src="'barname/baghi/pasafe.html'"></ng-include>
 
-					<a ui-sref="khane">
-						<img src="tasavir/logo_2.svg" class="LogoArm" alt="LogoArm">
-					</a>
-					<img src="tasavir/logo_1.svg" class="LogoNeveshte" alt="LogoNeveshte">
-				</div>
 			</div>
 
-			<div ui-view class="lafaf" ng-animate-children></div>
-
-			<ng-include src="'barname/baghi/pasafe.html'"></ng-include>
-
-		</article>
-
-	</section>
+		</snap-content>
+	</div>
 	<!-- bower:js -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/snapjs/snap.js"></script>
+	<script src="bower_components/angular-snap/angular-snap.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
 	<script src="bower_components/angular-scroll/angular-scroll.js"></script>
@@ -69,10 +59,10 @@
 
 	<!-- inject:js -->
 	<script src="barname/app.js"></script>
+	<script src="barname/jquery-scrolltofixed-min.js"></script>
 	<script src="barname/z-baghiye.js"></script>
 	<script src="barname/akhbar/akhbar.js"></script>
 	<script src="barname/darbare/darbare.js"></script>
-	<script src="barname/directive/menuitem.js"></script>
 	<script src="barname/directive/scroll.js"></script>
 	<script src="barname/directive/slider.js"></script>
 	<script src="barname/ertebat/ertebat.js"></script>

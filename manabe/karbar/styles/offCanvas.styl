@@ -1,0 +1,53 @@
+*
+  box-sizing: border-box
+aside
+  shift(-3/3, span)
+  span(1/3)
+  position fixed
+  z-index 5
+  top 0
+  bottom 0
+  overflow-y scroll
+  transition all 400ms ease
+  // button
+  //   span(1/10)
+  //   position: fixed
+  //   top: 0
+  //   right: 0
+  //   border: 0
+  //   text-align: center
+  //   color: white
+  //   padding: 1em
+  //   outline: none
+  //   border-radius: 0 0 3px 0
+
+// article
+//   span(8/10)
+//   shift(1/10, span)
+//   padding 1em
+
+section
+  &.in-view
+    aside
+      shift(-2/3, span)
+      position fixed
+      transition all 400ms ease
+    article
+      overflow hidden
+      span(2/3)
+      shift(1/3, span)
+      transition all 300ms ease
+    .overlay
+      display block
+      z-index 4
+    .sarbarg.sticky
+    	right 36%
+
+.overlay
+  background rgba(black, 50%)
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display none

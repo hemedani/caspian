@@ -2,11 +2,85 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #e69e87;
+  background: #998ba2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b64926;
+  background: #2f2933;
   border-radius: 3rem;
+}
+* {
+  box-sizing: border-box;
+}
+aside {
+  position: relative;
+  left: 100%;
+  *zoom: 1;
+  float: right;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-right: 0%;
+  margin-left: 0%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
+}
+aside:before,
+aside:after {
+  content: '';
+  display: table;
+}
+aside:after {
+  clear: both;
+}
+section.in-view aside {
+  position: relative;
+  left: 66.66666666666666%;
+  position: fixed;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
+}
+section.in-view article {
+  overflow: hidden;
+  *zoom: 1;
+  float: right;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-right: 0%;
+  margin-left: 0%;
+  position: relative;
+  left: -33.33333333333333%;
+  -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+}
+section.in-view article:before,
+section.in-view article:after {
+  content: '';
+  display: table;
+}
+section.in-view article:after {
+  clear: both;
+}
+section.in-view .overlay {
+  display: block;
+  z-index: 4;
+}
+section.in-view .sarbarg.sticky {
+  right: 36%;
+}
+.overlay {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
 }
 @font-face {
   font-family: 'WBardia';
@@ -1047,26 +1121,37 @@ button:hover::after {
           transition: all 0.35s;
 }
 .i-sabz {
-  background-color: #468966;
-  border: 0.15rem solid #509d75;
+  background-color: #97eb20;
+  border: 0.15rem solid #bdf271;
   overflow: hidden;
 }
 .i-sabz:hover {
-  color: rgba(195,224,209,0.8);
+  color: rgba(189,242,113,0.7);
 }
 .i-sabz::after {
-  background-color: rgba(42,82,61,0.8);
+  background-color: rgba(122,195,18,0.8);
 }
-.i-ghahve {
-  background-color: #b64926;
-  border: 0.15rem solid #ce532b;
+.i-firoz {
+  background-color: #1da493;
+  border: 0.15rem solid #29d9c2;
   overflow: hidden;
 }
-.i-ghahve:hover {
-  color: rgba(240,197,183,0.8);
+.i-firoz:hover {
+  color: #bdf271;
 }
-.i-ghahve::after {
-  background-color: rgba(215,100,63,0.8);
+.i-firoz::after {
+  background-color: rgba(23,131,117,0.8);
+}
+.i-sorme {
+  background-color: #2f2933;
+  border: 0.15rem solid #443c4a;
+  overflow: hidden;
+}
+.i-sorme:hover {
+  color: rgba(194,185,199,0.8);
+}
+.i-sorme::after {
+  background-color: rgba(90,78,97,0.8);
 }
 .i-alt {
   background-image: url("../tasavir/DSVG/iconalt.svg");
@@ -1103,34 +1188,9 @@ button:hover::after {
   left: 100%;
   right: -100%;
 }
-snap-content {
-  *zoom: 1;
-  width: auto;
-  max-width: 100%;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-  background-color: #ffefd8;
-  outline-style: solid;
-  outline-width: 0.2rem;
-  outline-color: rgba(98,152,207,0.6);
-  box-shadow: 0 0 3rem #142b42;
+body {
+  direction: rtl;
   font-family: 'WYekan';
-  z-index: 99;
-}
-snap-content:before,
-snap-content:after {
-  content: '';
-  display: table;
-}
-snap-content:after {
-  clear: both;
-}
-snap-content div.lafaf {
-  min-height: 45rem;
 }
 h1,
 h2,
@@ -1141,13 +1201,12 @@ a {
   margin: 0;
 }
 .direction {
-  direction: rtl;
-  position: static;
-  height: 100%;
-  width: 100%;
+  background: url("../tasavir/tweed.png") repeat;
+  color: #ffffc5;
 }
 .lafaf {
-  padding-top: 7.4rem;
+  min-height: 45rem;
+  padding-top: 7rem;
 }
 .mine-lafaf {
   position: relative;
@@ -1188,9 +1247,21 @@ ui-view.ng-enter,
           animation-duration: 0;
 }
 .menu {
-  direction: rtl;
   font-family: 'WYekan';
-  background-color: #79a7d6;
+  background: url("../tasavir/paper.png") repeat;
+}
+.menu .mine-lafaf-80 {
+  position: relative;
+  height: 12rem;
+}
+.menu .mine-lafaf-80 .LogoArm2 {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .menu nav {
   display: -webkit-box;
@@ -1218,7 +1289,7 @@ ui-view.ng-enter,
   line-height: 3em;
 }
 .menu nav .menu_item .i {
-  background: #1f4164;
+  background: #016164;
   display: block;
   position: absolute;
   right: 0;
@@ -1234,7 +1305,7 @@ ui-view.ng-enter,
   position: relative;
   display: block;
   height: 100%;
-  background: #336ca6;
+  background: #01a2a6;
   color: #fff;
   z-index: 2;
 }
@@ -1247,7 +1318,7 @@ ui-view.ng-enter,
 }
 .menu nav a::before {
   content: "";
-  background: #1f4164;
+  background: #016164;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -1275,76 +1346,10 @@ ui-view.ng-enter,
   margin-right: 4.8em;
 }
 .menu nav div {
-  border-bottom: 0.15em solid rgba(210,226,241,0.4);
+  border-bottom: 0.15em solid #bbfdff;
 }
 .menu nav div:last-child {
   border-bottom: none;
-}
-.dokmen {
-  border: solid #fff 0.19rem;
-  background-color: rgba(51,108,166,0.7);
-  box-shadow: 0 0 8px #0f2032;
-  text-shadow: 2px 2px 2px #0f2032;
-  color: #fff;
-  border-radius: 0.6rem;
-  padding: 0;
-  margin: 0.4rem 2rem 0 0;
-  height: 3rem;
-  width: 3rem;
-  font-size: 1.2rem;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.dokmen:hover {
-  width: 5.5rem;
-  background-color: #336ca6;
-}
-.dokmen:hover .rel .t-menu {
-  opacity: 1;
-  z-index: 550;
-}
-.dokmen:hover .rel .icm {
-  font-size: 2rem;
-  top: -1.1rem;
-}
-.dokmen:hover .rel .icl {
-  font-size: 2.4rem;
-  right: 3.25rem;
-  top: -1.2rem;
-}
-.dokmen .rel {
-  position: relative;
-}
-.dokmen .rel .t-menu {
-  position: absolute;
-  right: 1.9rem;
-  top: -1.4rem;
-  font-size: 1.6rem;
-  opacity: 0;
-  z-index: 500;
-  color: #fff;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.dokmen .rel .icm {
-  position: absolute;
-  right: 0.1rem;
-  top: -1.05rem;
-  z-index: 699;
-  color: #fff;
-  font-size: 1.8rem;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.dokmen .rel .icl {
-  position: absolute;
-  right: 1.1rem;
-  top: -1.05rem;
-  z-index: 699;
-  color: #fff;
-  font-size: 1.8rem;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
 }
 .btn-menu {
   position: absolute;
@@ -1363,40 +1368,42 @@ ui-view.ng-enter,
   position: absolute;
   opacity: 0;
   padding: 0.2rem 1rem 0.2rem 0.3rem;
-  line-height: 1rem;
+  line-height: 0.9rem;
   right: 2rem;
   top: 0.7rem;
   color: #fff;
-  width: 2rem;
-  height: 1.2rem;
+  width: 3rem;
+  height: 1.6rem;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
-  background-color: #b64926;
+  background-color: #29d9c2;
 }
 .btn-menu:hover span {
   opacity: 1;
   -webkit-animation: fadeInRight 800ms;
           animation: fadeInRight 800ms;
 }
-div.sarbarg {
+.sarbarg {
   width: 100%;
+  position: fixed;
+  z-index: 4;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
 }
-div.sarbarg .paein {
+.sarbarg .paein {
   line-height: 2.3rem;
   font-size: 1rem;
   height: 5.2rem;
   position: relative;
-  background-color: #edf3f9;
+  background-color: #efecf0;
   border-bottom: 0.18rem solid #7e7972;
-  border-top: 0.3rem solid #17314b;
+  border-top: 0.3rem solid #151217;
   color: #fff;
   text-shadow: 0 1px 15px #000;
   box-shadow: 0 1px 15px rgba(0,0,0,0.8);
   color: #fff;
-  -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease;
 }
-div.sarbarg .paein .LogoArm {
+.sarbarg .paein .LogoArm {
   position: absolute;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -1406,7 +1413,7 @@ div.sarbarg .paein .LogoArm {
           transform: translate(-50%, -50%);
   height: 80%;
 }
-div.sarbarg .paein .LogoNeveshte {
+.sarbarg .paein .LogoNeveshte {
   position: absolute;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -1416,30 +1423,39 @@ div.sarbarg .paein .LogoNeveshte {
   padding-left: 1rem;
   left: 0;
 }
-div.sarbarg .balla {
+.sarbarg .balla {
   width: 100%;
   height: 1.9rem;
-  background-color: #17314b;
-  -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease;
+  background-color: #2f2933;
 }
-div.sticky .balla {
+.sarbarg.sticky {
+  width: 8rem;
+  right: 2rem;
+  top: 2rem;
+}
+.sarbarg.sticky .balla {
   display: none;
 }
-div.sticky .paein {
+.sarbarg.sticky .paein {
   z-index: 1500;
   top: 0;
   font-size: 1.2rem;
-  height: 3.2rem;
+  height: 4.5rem;
   padding-top: 0;
-  background-color: rgba(228,237,247,0.8);
+  background-color: rgba(230,227,233,0.7);
+  border-radius: 0.4rem;
 }
-div.sticky .paein a {
+.sarbarg.sticky .paein .LogoArm {
+  right: -1rem;
+}
+.sarbarg.sticky .paein .LogoNeveshte {
+  display: none;
+}
+.sarbarg.sticky .paein .btn-menu {
+  right: 4.5rem;
+}
+.sarbarg.sticky .paein a {
   font-size: 3.5rem;
-}
-#header {
-  position: fixed;
-  z-index: 5;
 }
 .iconha .icone {
   display: block;
@@ -1501,7 +1517,7 @@ div.sticky .paein a {
   color: #fff;
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
-  background-color: #468966;
+  background-color: #136e62;
 }
 .slider {
   position: relative;
@@ -1535,20 +1551,22 @@ div.sticky .paein a {
   right: 2.2rem;
   z-index: 3;
   opacity: 0.5;
-  width: 7.6rem;
+  width: 8rem;
   overflow: hidden;
 }
 .slider .arrows span {
   position: absolute;
   opacity: 0;
   padding: 0.2rem 0.8rem 0.2rem 0.3rem;
+  line-height: 1.5rem;
   right: 2rem;
-  top: 0.5rem;
+  top: 0.7rem;
   color: #fff;
-  width: 4.45rem;
-  border-top-left-radius: 0.7rem;
-  border-bottom-left-radius: 0.7rem;
-  background-color: #b64926;
+  width: 6rem;
+  height: 2rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: #1da493;
 }
 .slider .arrows:hover {
   opacity: 1;
@@ -1564,12 +1582,12 @@ div.sticky .paein a {
   left: 2rem;
   z-index: 3;
   padding: 0 0.8rem 0.4rem 0.8rem;
-  background-color: rgba(70,137,102,0.7);
+  background-color: rgba(1,162,166,0.7);
   color: #fff;
-  border-top: 0.4rem solid #2a523d;
+  border-right: 0.3rem solid #016164;
   border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
-  box-shadow: 0px 0px 5px #070e0a;
+  border-top-left-radius: 0.4rem;
+  box-shadow: 0px 0px 5px #001011;
 }
 .slider p {
   position: absolute;
@@ -1577,12 +1595,12 @@ div.sticky .paein a {
   left: 2rem;
   z-index: 3;
   padding: 0.2rem 0.5rem;
-  background-color: rgba(70,137,102,0.7);
+  background-color: rgba(1,162,166,0.7);
   color: #fff;
-  border-right: 0.4rem solid #2a523d;
-  border-bottom-left-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  box-shadow: 0px 0px 5px #070e0a;
+  border-right: 0.3rem solid #016164;
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  box-shadow: 0px 0px 5px #001011;
 }
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
@@ -1590,29 +1608,29 @@ div.sticky .paein a {
 }
 .slide.ng-hide-add,
 .slide.ng-hide-remove.ng-hide-remove-active {
-  -webkit-animation: slideInRight 800ms;
-          animation: slideInRight 800ms;
   z-index: 1;
-}
-.slide.ng-hide-add h1,
-.slide.ng-hide-remove.ng-hide-remove-active h1 {
-  -webkit-animation: fadeInDown 1150ms;
-          animation: fadeInDown 1150ms;
-  -webkit-animation-delay: 50ms;
-          animation-delay: 50ms;
-}
-.slide.ng-hide-add p,
-.slide.ng-hide-remove.ng-hide-remove-active p {
-  -webkit-animation: fadeInRight 1350ms;
-          animation: fadeInRight 1350ms;
-  -webkit-animation-delay: 50ms;
-          animation-delay: 50ms;
+  -webkit-animation: slideInDown 950ms;
+          animation: slideInDown 950ms;
 }
 .slide.ng-hide-add.ng-hide-add-active,
 .slide.ng-hide-remove {
-  -webkit-animation: slideOutLeft 1600ms;
-          animation: slideOutLeft 1600ms;
-  z-index: -5;
+  -webkit-animation: slideOutUp 1200ms;
+          animation: slideOutUp 1200ms;
+  z-index: 0;
+}
+.slide.ng-hide-add.ng-hide-add-active h1,
+.slide.ng-hide-remove h1 {
+  -webkit-animation: fadeInUp 1500ms;
+          animation: fadeInUp 1500ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.slide.ng-hide-add.ng-hide-add-active p,
+.slide.ng-hide-remove p {
+  -webkit-animation: fadeInUp 1850ms;
+          animation: fadeInUp 1850ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 .chap {
   direction: ltr;
@@ -1620,10 +1638,11 @@ div.sticky .paein a {
 }
 .zir-slide {
   position: relative;
-  background: #dc7757;
+  background-image: url("../tasavir/footer.png");
+  background-color: #28232b;
   height: 12rem;
-  border-bottom: 0.32rem dashed #b64926;
-  border-top: 0.32rem dashed #b64926;
+  border-bottom: 0.2rem dashed #2f2933;
+  border-top: 0.2rem dashed #2f2933;
   display: block;
 }
 .zir-slide section .nvsh {
@@ -1676,7 +1695,7 @@ div.sticky .paein a {
   margin-right: auto;
   position: relative;
   overflow: hidden;
-  background: #3085a3;
+  background: #29d9c2;
   text-align: center;
   cursor: pointer;
   box-shadow: 0px 0px 10px #000;
@@ -1770,8 +1789,7 @@ div.sticky .paein a {
           transform: translate3d(0, 0, 0);
 }
 .grid .effect-milo:hover h2 {
-  background: #2a523d;
-  right: 7rem;
+  left: 2rem;
 }
 .grid .effect-milo img {
   max-width: none;
@@ -1789,18 +1807,17 @@ div.sticky .paein a {
   font-size: 1.5rem;
   margin: 0;
   line-height: 2rem;
-  right: 5rem;
-  bottom: 6rem;
-  text-shadow: 0 0 3px #b64926, 0 0 5px #5b2513;
-  background: rgba(42,82,61,0.7);
+  left: 1rem;
+  bottom: 1.3rem;
+  text-shadow: 0 0 3px #2f2933, 0 0 5px #18151a;
   border-radius: 0.8rem;
   padding: 0 0.4rem;
-  -webkit-transition: background 0.35s, right 0.35s;
-          transition: background 0.35s, right 0.35s;
+  -webkit-transition: left 0.35s;
+          transition: left 0.35s;
 }
 .grid .effect-milo p {
   padding: 0 0.8rem 1rem 0;
-  width: 50%;
+  width: 70%;
   border-right: 1px solid #fff;
   text-align: right;
   opacity: 0;
@@ -1863,11 +1880,11 @@ div.sticky .paein a {
   width: 18rem;
   height: 25rem;
   font-size: 8rem;
-  color: rgba(128,36,0,0.8);
+  color: rgba(35,197,176,0.4);
   box-shadow: 0px 0px 10px #000;
-  border: 3px dashed rgba(85,24,0,0.8);
+  border: 3px dashed rgba(23,131,117,0.8);
   border-radius: 1rem;
-  background-color: rgba(142,40,0,0.5);
+  background-color: rgba(41,217,194,0.5);
   -webkit-transform: rotateY(-30deg);
           transform: rotateY(-30deg);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -1882,7 +1899,7 @@ div.sticky .paein a {
   clear: both;
 }
 .portfolio-item .portfolio-description {
-  background-color: rgba(255,192,98,0.8);
+  background-color: rgba(90,78,97,0.8);
   color: #fff;
   font-size: 20px;
   padding: 0.5rem;
@@ -1893,7 +1910,7 @@ div.sticky .paein a {
   margin-left: auto;
   left: 0;
   right: 0;
-  border: 3px dotted #fff;
+  border: 2px dotted #fff;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px #000;
   -webkit-transform: rotateY(-30deg) translateZ(60px);
@@ -1930,14 +1947,14 @@ div.sticky .paein a {
   border: 0.15rem solid rgba(24,24,24,0.29);
 }
 #scrollToTop:hover {
-  background-color: #6298cf;
+  background-color: #6f6179;
 }
 #scrollToTop:hover .i-balla {
   padding-bottom: 1rem;
   font-size: 2.2rem;
 }
 #scrollToTop:active {
-  background-color: #244c74;
+  background-color: #211d24;
 }
 #scrollToTop .i-balla {
   font-size: 1.8rem;
@@ -1953,7 +1970,9 @@ div.sticky .paein a {
           transition: all 0.2s;
 }
 .pasafe {
-  background-color: #193653;
+  background-image: url("../tasavir/footer.png");
+  background-color: #2f2933;
   height: 13rem;
   width: 100%;
+  color: #ffffc1;
 }

@@ -1,23 +1,70 @@
 (function () {
 	'use strict';
 
-	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'snap', 'duParallax']);
+	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'duParallax']);
 
-	app.controller('asliCtrl', function ($rootScope, $anchorScroll, snapRemote) {
+	app.controller('asliCtrl', function ($rootScope, $scope, $anchorScroll) {
+		$rootScope.$on('$stateChangeStart', function () {
+			if ($('section').hasClass('in-view')) {
+				$('section').removeClass('in-view');
+			}
+		});
 		$rootScope.$on('$stateChangeSuccess', function () {
-			$('#AmirSnapper').animate({
+			$('html, body').animate({
 				scrollTop: 0
 			}, 800);
-			snapRemote.close();
 		});
+		$scope.collapse = function () {
+			if ($('section').hasClass('in-view')) {
+				$('section').removeClass('in-view');
+			} else {
+				$('section').addClass('in-view');
+			}
+		};
+		$scope.baste = function () {
+			if ($('section').hasClass('in-view')) {
+				$('section').removeClass('in-view');
+			}
+		};
+
+		$scope.gozineha = [{
+			masir: 'khane',
+			icon: 'icon-home',
+			esm: 'خانه'
+		}, {
+			masir: 'akhbar',
+			icon: 'icon-newspaper',
+			esm: 'اخبار'
+		}, {
+			masir: 'maghale',
+			icon: 'icon-pencil',
+			esm: 'مقالات'
+		}, {
+			masir: 'rahbord',
+			icon: 'icon-eye',
+			esm: 'راهبردها'
+		}, {
+			masir: 'zamine',
+			icon: 'icon-droplet',
+			esm: 'زمینه کاری'
+		}, {
+			masir: 'darbare',
+			icon: 'icon-info',
+			esm: 'درباره ما'
+		}, {
+			masir: 'ertebat',
+			icon: 'icon-phone',
+			esm: 'ارتباط با ما'
+		}, {
+			masir: 'iconha',
+			icon: 'icon-home',
+			esm: 'آیکون ها'
+		}];
 	});
 
-	app.config(function ($stateProvider, $urlRouterProvider, snapRemoteProvider) {
+	app.config(function ($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise('/khane');
-		snapRemoteProvider.globalOptions = {
-			disable: 'left'
-		};
 
 		$stateProvider.state('khane', {
 				url: '/khane',

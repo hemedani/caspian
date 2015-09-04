@@ -28,22 +28,31 @@ button
 			transition all 0.35s
 
 .i-sabz
-	background-color sabz(1)
-	border 0.15rem solid lighten(sabz(1), 10%)
+	background-color darken(sabz(1), 25%)
+	border 0.15rem solid sabz(1)
 	overflow hidden
 	&:hover
-		color lighten(sabz(0.8), 70%)
+		color sabz(0.7)
 	&::after
 		background-color darken(sabz(0.8), 40%)
 
-.i-ghahve
-	background-color ghahvei(1)
-	border 0.15rem solid lighten(ghahvei(1), 10%)
+.i-firoz
+	background-color darken(firoze(1), 25%)
+	border 0.15rem solid firoze(1)
 	overflow hidden
 	&:hover
-		color lighten(ghahvei(0.8), 70%)
+		color sabz(1)
 	&::after
-		background-color lighten(ghahvei(0.8), 20%)
+		background-color darken(firoze(0.8), 40%)
+
+.i-sorme
+	background-color sorme(1)
+	border 0.15rem solid lighten(sorme(1), 10%)
+	overflow hidden
+	&:hover
+		color lighten(sorme(0.8), 70%)
+	&::after
+		background-color lighten(sorme(0.8), 20%)
 
 .i-alt
 	background-image url('../tasavir/DSVG/iconalt.svg')
