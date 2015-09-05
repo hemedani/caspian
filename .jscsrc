@@ -68,5 +68,5 @@
     "requireCommaBeforeLineBreak": null,
     "requireDotNotation": null,
     "requireMultipleVarDecl": null,
-    "requireParenthesesAroundIIFE": true
+    "requireParenthesesAroundIIFE": false
 }

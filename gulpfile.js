@@ -174,7 +174,7 @@ function shoroBroserSync() {
 			forms: true,
 			scroll: true
 		},
-		browser: 'chromium-browser',
+		browser: 'chromium',
 		// injectChanges: true,
 		logFileChanges: true,
 		logLevel: 'debug',

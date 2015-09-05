@@ -1,27 +1,33 @@
-(function () {
+(function() {
 	'use strict';
 
-	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'angular-loading-bar', 'duParallax']);
+	var app = angular.module('naft', ['ui.router', 'ngAnimate', 'ngTouch', 'angular-loading-bar', 'duParallax']);
 
-	app.controller('asliCtrl', function ($rootScope, $scope, $anchorScroll) {
-		$rootScope.$on('$stateChangeStart', function () {
+	app.controller('asliCtrl', function($rootScope, $scope, $anchorScroll) {
+		$rootScope.$on('$stateChangeStart', function() {
 			if ($('section').hasClass('in-view')) {
 				$('section').removeClass('in-view');
 			}
 		});
-		$rootScope.$on('$stateChangeSuccess', function () {
+		$rootScope.$on('$stateChangeSuccess', function() {
 			$('html, body').animate({
 				scrollTop: 0
 			}, 800);
 		});
-		$scope.collapse = function () {
+		$scope.collapse = function() {
 			if ($('section').hasClass('in-view')) {
 				$('section').removeClass('in-view');
 			} else {
 				$('section').addClass('in-view');
 			}
 		};
-		$scope.baste = function () {
+		$scope.baz = function() {
+			if (!$('section').hasClass('in-view')) {
+				$('section').addClass('in-view');
+			}
+		};
+
+		$scope.baste = function() {
 			if ($('section').hasClass('in-view')) {
 				$('section').removeClass('in-view');
 			}
@@ -62,7 +68,7 @@
 		}];
 	});
 
-	app.config(function ($stateProvider, $urlRouterProvider) {
+	app.config(function($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise('/khane');
 
